@@ -226,7 +226,7 @@ def main(argv=None):
     # and normalize audio file in the [ -1 ; 1 ] range
     normalized_data = raw_data / 2 ** normalize_bits
 
-    byte_per_frame = fs / opts.target_fps
+    byte_per_frame = int(fs / int(opts.target_fps))
 
     frame_start = 0
     frame_index = 0
